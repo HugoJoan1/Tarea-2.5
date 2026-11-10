@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html{
+            background-color: #05a3ffa6;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>Escoje un idioma</h2>
+    <h1>Escoje un idioma</h1>
+    <h2>Idiomas:</h2>
     <!--select y form para dar opciones -->
     <form method="POST" action="">
     <select id="idiomas" name="idiomas">
@@ -28,22 +35,27 @@
         // definimos lenguajes
         $lenguaje = $_POST["idiomas"];
 
+        // Esta etiquita para que el resultado sea mas grande
+        echo "<h2>";
+        
         // if para que se muestre el saludo correcto
+
         if($lenguaje === "Ingles"){
-            echo "Hello!";
+            echo "<strong>Hello!</strong>";
         }
         else if($lenguaje === "Italiano"){
-            echo "Ciao!";
+            echo "<strong>Ciao!</strong>";
         }
         else if($lenguaje === "Aleman"){
-            echo "Hallo!";
+            echo "<strong>Hallo!</strong>";
         }
         else if($lenguaje === "Frances"){
-            echo "Bonjour!";
+            echo "<strong>Bonjour!</strong>";
         }
         else if($lenguaje === "Ruso"){
-            echo "Привет!";
+            echo "<strong>Привет!</strong>";
         }
+        echo "</h2>";
     }
     ?>
 
