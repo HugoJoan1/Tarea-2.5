@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Escoje un idioma</h2>
+    <!--select y form para dar opciones -->
     <form method="POST" action="">
     <select id="idiomas" name="idiomas">
     <option value=""></option>
@@ -18,13 +19,16 @@
     </select>
 
     <br><br>
+    <!--El button para que aparezca un boton -->
     <button type="submit" name="saludo">Enseñar saludo</button>
     <br><br>
 
     <?php
         if($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['saludo'])){
+        // definimos lenguajes
         $lenguaje = $_POST["idiomas"];
 
+        // if para que se muestre el saludo correcto
         if($lenguaje === "Ingles"){
             echo "Hello!";
         }
